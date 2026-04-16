@@ -7,3 +7,4 @@ output/
 .tracelayer/
 .tracegen/
 .DS_Store
+.claude/skills/
