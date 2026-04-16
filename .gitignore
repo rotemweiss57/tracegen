@@ -1,0 +1,9 @@
+node_modules/
+dist/
+output/
+.env
+.env.local
+*.tsbuildinfo
+.tracelayer/
+.tracegen/
+.DS_Store

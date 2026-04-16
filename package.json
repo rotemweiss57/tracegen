@@ -1,0 +1,79 @@
+{
+  "name": "tracegen",
+  "version": "1.0.0",
+  "description": "The universal error layer for coding agents — turns cryptic errors into structured debugging intelligence",
+  "type": "module",
+  "bin": {
+    "tracegen": "./dist/cli.js"
+  },
+  "main": "./dist/analyzer/index.js",
+  "types": "./dist/analyzer/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/analyzer/index.js",
+      "types": "./dist/analyzer/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/analyzer/types.js",
+      "types": "./dist/analyzer/types.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rotemweiss57/tracegen.git"
+  },
+  "homepage": "https://github.com/rotemweiss57/tracegen#readme",
+  "bugs": {
+    "url": "https://github.com/rotemweiss57/tracegen/issues"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "mcp-server": "tsx src/mcp-server.ts"
+  },
+  "keywords": [
+    "debugging",
+    "llm",
+    "agents",
+    "testing",
+    "developer-tools",
+    "error-analysis",
+    "mcp",
+    "coding-agents",
+    "tracegen",
+    "claude-code",
+    "cursor",
+    "python",
+    "typescript",
+    "golang",
+    "rust",
+    "java"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.89.0",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "execa": "^9.3.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.2.4"
+  }
+}
